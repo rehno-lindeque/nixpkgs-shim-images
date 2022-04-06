@@ -5,16 +5,10 @@ flake: {
 }: let
   cfg = config.isoImage;
 in {
-  options = with lib; {
-    isoImage = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-        description = ''
-          Whether to generate an ISO image file.
-        '';
-      };
-    };
+  options = {
+    isoImage.enable = lib.mkEnableOption ''
+      Whether to generate an ISO image file.
+    '';
   };
 
   imports = [

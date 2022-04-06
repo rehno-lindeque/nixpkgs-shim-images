@@ -5,16 +5,10 @@ flake: {
 }: let
   cfg = config.netboot;
 in {
-  options = with lib; {
-    netboot = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-        description = ''
-          Whether to generate a netboot image.
-        '';
-      };
-    };
+  options = {
+    netboot.enable = lib.mkEnableOption ''
+      Whether to generate a netboot image.
+    '';
   };
 
   imports = [
