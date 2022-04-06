@@ -3,10 +3,10 @@ flake: {
   lib,
   ...
 }: let
-  cfg = config.netboot;
+  cfg = config.images.netboot;
 in {
   options = {
-    netboot.enable = lib.mkEnableOption ''
+    images.netboot.enable = lib.mkEnableOption ''
       Whether to generate a netboot image.
     '';
   };

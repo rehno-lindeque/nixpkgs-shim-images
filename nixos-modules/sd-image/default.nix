@@ -3,10 +3,10 @@ flake: {
   lib,
   ...
 }: let
-  cfg = config.sdImage;
+  cfg = config.images.sdImage;
 in {
   options = {
-    sdImage.enable = lib.mkEnableOption ''
+    images.sdImage.enable = lib.mkEnableOption ''
       Whether to generate an SD image file.
     '';
   };

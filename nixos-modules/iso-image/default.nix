@@ -3,10 +3,10 @@ flake: {
   lib,
   ...
 }: let
-  cfg = config.isoImage;
+  cfg = config.images.isoImage;
 in {
   options = {
-    isoImage.enable = lib.mkEnableOption ''
+    images.isoImage.enable = lib.mkEnableOption ''
       Whether to generate an ISO image file.
     '';
   };
