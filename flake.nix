@@ -13,6 +13,7 @@
           sdImage
           netboot
         ];
+      };
       isoImage = import ./nixos-modules/iso-image self;
       sdImage = import ./nixos-modules/sd-image self;
       netboot = import ./nixos-modules/netboot self;
